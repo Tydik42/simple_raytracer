@@ -3,11 +3,11 @@ project(simple_raytracer)
 add_executable (${PROJECT_NAME} main.cpp)
 
 # Include directories
-include_directories(${CMAKE_SOURCE_DIR}/src)
-target_include_directories(${PROJECT_NAME} PRIVATE ${CMAKE_SOURCE_DIR}/src)
+include_directories(${CMAKE_SOURCE_DIR}/core/include)
+target_include_directories(${PROJECT_NAME} PRIVATE ${CMAKE_SOURCE_DIR}/core/include)
 
 
-file(GLOB_RECURSE SOURCES "${CMAKE_SOURCE_DIR}/src/*.cpp")
+file(GLOB_RECURSE SOURCES "${CMAKE_SOURCE_DIR}/core/src/*.cpp")
 target_sources(${PROJECT_NAME} PRIVATE ${SOURCES})
 
 
