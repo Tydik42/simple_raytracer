@@ -16,7 +16,7 @@ bool sphere::hit(const ray& r, interval ray_t, hit_record& rec) const
 
 	// Find the nearest root that lies in the acceptable range.
 	auto root = (h - sqrtd) / a;
-	if (ray_t.surrounds(root)) {
+	if (!ray_t.surrounds(root)) {
 		root = (h + sqrtd) / a;
 		if (!ray_t.surrounds(root))
 			return false;
