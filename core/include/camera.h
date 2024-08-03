@@ -5,9 +5,10 @@
 namespace simpleRT {
 class camera {
 public:
-	double aspect_ratio = 1.0;  // Ratio of image width over height
-	int    image_width  = 100;  // Rendered image width in pixel count
+	double aspect_ratio      = 1.0;  // Ratio of image width over height
+	int    image_width       = 100;  // Rendered image width in pixel count
 	int    samples_per_pixel = 10;   // Count of random samples for each pixel
+	int    max_depth         = 10;   // Maximum number of ray bounces into scene
 
 	void render(const hittable& world);
 
@@ -20,7 +21,7 @@ private:
 	double pixel_samples_scale; // Color scale factor for a sum of pixel samples
 
 	void initialize();
-	[[nodiscard]] color ray_color(const ray& r, const hittable& world) const;
+	[[nodiscard]] color ray_color(const ray& r, int depth, const hittable& world) const;
 	[[nodiscard]] ray get_ray(int i, int j) const;
 	[[nodiscard]] vec3 sample_square() const;
 };
