@@ -7,7 +7,6 @@
 #include <vector>
 #include <random>
 
-
 // Common Headers
 
 #include "color.h"

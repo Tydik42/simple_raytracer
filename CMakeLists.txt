@@ -1,6 +1,10 @@
 cmake_minimum_required(VERSION 3.20)
 project(simple_raytracer)
-add_executable (${PROJECT_NAME} main.cpp)
+add_executable (${PROJECT_NAME} main.cpp
+        # TODO: fix linkig of material classes
+        core/src/metal.cpp
+        core/src/lambertian.cpp
+)
 
 # Include directories
 include_directories(${CMAKE_SOURCE_DIR}/core/include)

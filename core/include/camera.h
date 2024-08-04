@@ -1,6 +1,8 @@
 #pragma once
 #include "simplert.h"
+
 #include "hittable.h"
+#include "material.h"
 
 namespace simpleRT {
 class camera {
