@@ -4,6 +4,7 @@ add_executable (${PROJECT_NAME} main.cpp
         # TODO: fix linkig of material classes
         core/src/metal.cpp
         core/src/lambertian.cpp
+        core/src/dielectric.cpp
 )
 
 # Include directories
