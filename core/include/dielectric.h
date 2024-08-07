@@ -8,7 +8,7 @@ namespace simpleRT {
 class dielectric : public material
 {
 public:
-	dielectric(double refraction_index);
+	explicit dielectric(double refraction_index);
 
 	bool scatter(const ray& r_in, const hit_record& rec, color& attenuation, ray& scattered) const override;
 
